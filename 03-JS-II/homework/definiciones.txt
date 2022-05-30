@@ -1,0 +1,70 @@
+* `for`
+los bucles for se utilizan para realizar una serie de Instrucciones
+repetidas veces hasta que se cumpla una condicion para que termine
+ por ejemplo, si queremos que se imprima en consola los numeros del 1 al 10 debemos de hacer lo siguientes
+
+//nuestro arreglo de numeros en donde se guardará cada iteración de i
+let arr = []
+// bucle for
+// donde:
+// i: es la variable que irá incrementando
+// i <= 10: es la condición, la variable i seguirá incrementando
+// mientras el valor de i sea menor o igual a 10 
+// i++: significa que cada vez que se repita el bucle i seguirá incrementando en 1
+// es lo mismo que decir i = i + 1 
+// arr es el arreglo en donde se almacenarán los valores de i 
+// arr.push() nos permite almacenar cada valor de i en un arreglo 
+//console.log(arr) mostrará en pantalla el arreglo:
+// [1,2,3,4,5,6,7,8,9,10]
+for(let i = 1; i <= 10; i++){
+ arr.push(i)
+}
+
+console.log(arr)
+
+
+
+* `&&`, `||`, `!`
+
+Operadores lógicos se utilizan de la mano con condicionales (if/else)
+nos ayudan a que podamos restringir la ejecucion de instrucciones si no se cumplen todas
+o al menos una de las condiciones establecidas
+
+&& <--- se utiliza para que las instrucciones se ejecuten sí y solo sí
+se cumplen TODAS las condiciones 
+
+ejemplo:
+if(edad > 0 && edad > 21){
+    "usted es un adulto"
+} else {
+    "Acceso denegado"
+}
+Aqui estamos validando que la edad no sea negativa 
+(por ende el "edad > 0") y que además la edad
+tambien sea mayor 21. 
+
+En este caso, AMBAS condiciones deben de cumplirse 
+para que se ejecuten las instrucciones
+
+|| <--- A diferencia del operador && en este
+al menos 1 de las condiciones debe de cumplirse para que se ejecuten las instrucciones
+
+de modo que: 
+
+if (numero === 0 || numero > 0 ){
+    return "el numero pertenece a los numeros enteros"
+}
+
+En este caso, solo se necesita que al menos una de las condiciones se cumpla
+
+! <--- negación, este operador logico se utilizar para reflejar lo opuesto a una condicion
+
+Por ejemplo
+if (!edad){
+    return "usted no existe"
+}
+
+en este caso se interpreta la condicion como
+"si NO hay edad..."
+
+

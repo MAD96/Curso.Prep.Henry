@@ -1,0 +1,27 @@
+*Arrays
+
+Los arrays pueden definirse como un contenedor, en el cual 
+se pueden almacenar diferentes tipos de elementos
+
+La nomenclatura de un arreglo es la siguiente 
+
+let arregloFrutas = ['Mangos','Peras','Uvas','Piñas']
+
+donde los elementos están separados por una coma, y están
+contenidos entre corchetes [] 
+
+Los arrecglos pueden tener elementos de tipo string, números,
+booleanos (true/false) y accedemos a ellos mediante el índice
+
+Por ejemplo:
+Tenemos un arreglo de elementos vario
+
+let arregloDeCosas = ['Hola Mundo','123',123,false,null]
+
+Si quisiéramos acceder al elemento false debemos escribir:
+
+arregloDeCosas[3]
+
+Esto nos devolverá el elemento 'false'
+
+los arrays SIEMPRE empiezan en la posición 0

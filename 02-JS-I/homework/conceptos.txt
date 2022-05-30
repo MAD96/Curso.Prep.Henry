@@ -1,0 +1,58 @@
+1.
+
+	* Variables
+En programación, una variable es un contenedor el cual puede "contener" algún dato. 
+Un dato es la porción más pequeña de la información
+Estos datos pueden ser números (1,2,3,0.5...), caracteres (a,@,=...),cadenas de caracteres 
+("hola mundo","abc123"...) y arreglos de datos ([1,50,"tomate","dsa456"])
+
+	* Strings
+Un string es una "cadena" de caracteres, estos pueden ser tanto números ("1234556789")
+como alfanuméricos ("a1d5687qwefsPLCA"), además de también cualquier caracter 
+del espectro ASCII.
+
+	* Funciones (argumentos, `return`)
+Las funciones son series de instrucciones que se ejecutan al proporcionarles
+datos. En una función se pasan argumentos, los cuales son datos requeridos
+por la función para entregar un resultado.
+return es el paso final de una función, en la cual se 
+entrega el resultado final de la función despues de haber
+realizado todas las operaciones con los argumentos insertados 
+en la función
+
+	* Declaraciones `if`
+Las declaraciones if consisten en procesos y respuestas 
+que se retornarán sí se cumplen uns parámetros previamente establecidos
+(condición). Por ejemplo, podemos hacer que un programa nos diga que podemos ver una película
+sí tenemos 18 años o más, caso contrario, no nos permitirá verla
+
+if( edad >= 18) 
+{
+	return "puedes ver la película"
+} else {
+	return "no puedes ver la película"
+}
+
+	* Valores booleanos (`true`, `false`)
+Los valores booleanos sirven para indicarnos si 
+una o más condiciones se han cumplido, de manera de que
+consecuentes operaciones puedan o no proceder
+
+Por ejemplo, si le pidieramos al usuario ingresar su edad,
+su edad debe ser siempre un número entero y positivo, para
+poder continuar un proceso de registro, en el caso de que la edaddel usuario
+sea negativa o igual a 0, debemos de indicarle que los datos son incorrectos
+
+Ejemplo:
+
+//cuando iniciamos una variable de tipo booleana, debemos asignarle
+//un valor por defecto, bien sea true o false
+
+let condicion = true
+
+if(edad <= 0){ //si la edad es menor o igual a  0
+	condicion = false
+	return "La edad ingresada no es valida, intente de nuevo"
+} else {
+	return "Edad registrada exitosamente"
+}
