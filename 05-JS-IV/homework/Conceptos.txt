@@ -1,0 +1,67 @@
+	* Objetos
+Los objetos son elementos especiales, cuya principal carasteristica 
+es que puede contener diversas propiedades. Además, sirven para
+crear un modelo base el cual podemos reutilizar cuantas veces sea necesario.
+Por ejemplo: 
+
+Si quisieramos crear un objeto 'persona', podemos añadirle varias
+caracteristicas.
+
+let perona = new Object() {
+    nombre: 'Arturo',
+    edad: 30,
+    gustos: ['videojuegos','JavaScript','Rock']
+}
+
+	* Propiedades
+Las propiedades son caracteristicas que poseen los objetos,
+como se puede apreciar en el ejemplo anterior, estas propiedades
+pueden tener cualquier tipo de valor.
+
+	* Métodos
+Los métodos son funciones que están dentro de un objeto. Por ejemplo
+si quisiéramos añadir "saludar" a nuestro objeto persona
+como un método lo haríamos de la siguiente manera:
+
+persona.saludar = function() {
+
+		console.log(`Hola, mi nombre es ${this.nombre}`)
+}
+
+	* Bucle `for…in`
+El bucle for...in funciona de una manera parecida al clásico
+bucle for, con la diferencia de que con éste no requerimos
+una variable iterable, ya que el for...in nos permite recorrer los 
+las propiedades de nuestro objeto, de tal manera que:
+
+const persona = {
+ nombre: "Marco",
+ apellido: "Polo",
+ edad: 30,
+ email: "Delft.Stack@gmail.com"
+};
+
+for(const prop in persona)
+ console.log(`${prop}: ${persona[prop]}`)
+
+ Se nos mostrará en la consola:
+
+ "nombre: Delft"
+"apellido: Stack"
+"edad: 30"
+"email: Delft.Stack@gmail.com"
+
+	* Notación de puntos vs notación de corchetes
+
+Ambas notaciones se utilizan para acceder a las propiedades de los 
+objetos, sin embargo, existen algunas diferencias:
+
+	-Notación de punto:
+		Menos verbosa (escribimos menos) (objeto.propiedad)
+		Hay caracteres que no podemos usar con ella (EJ: /()#$&#$...)
+		Nos sirve cuando trabajamos con propiedades con nombres similares
+		
+	-Notación de corchetes:
+	Notación más verbosa (objeto['propiedad'])
+	Nos permite trabajar con propiedades que contienen carecteres especiales
+	y a seleccionar propiedades usando variables
