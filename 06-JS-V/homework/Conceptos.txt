@@ -1,0 +1,33 @@
+    * `prototype`
+Se entiendde prototype como el arquetipo de un objeto, el cual está complementado con un montón de propiedades en ellas.
+por ejemplo: si creamos un arreglo [1,2,"hola",false] estamos creando un objeto de tipo Array.
+
+el prototipo del Array contiene propiedades y métodos
+
+Array.join()
+Array.reverse()
+Array.forEach()
+Array.map()
+....
+
+por lo cual podremos utilizar cualquiera de estas propiedades y métodos en el arreglo que hicimos
+
+
+
+    * _Constructors_ (de Clases)
+
+Los constructores nos permiten definir valores y propiedades (key: value) en las clases, así como tambien métodos
+que después podemos utilizar cuando tengamos que crear nuevos elementos de la clase que previamente creamos
+
+De modo que:
+
+class Mascota {
+    constructor(especie,nombre){
+        this.especie: especie
+        this.nombre: nombre
+    }
+}
+
+let Gato = new Mascota("Felidae","Mika")
+
+Gato es una instancia nueva de la clase Mascota
