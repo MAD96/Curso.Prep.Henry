@@ -1,0 +1,26 @@
+        * Funciones Callback
+
+Las funciones Callback son funciones que se "llaman" (por eso el CALL-back) dentro de otras funciones. Nos permite
+organizar nuestro código de manera que podamos seccionar nuestras instrucciones y además poder re-utilizar el mismo código
+para más de una instancia .
+
+Por ejemplo, si queremos crear una función que nos muestre la tabla de multiplicar del 1 al 10 con un número ingresado
+por el usuario podemos hacer lo siguiente:
+
+function mostrarTabla(num){
+    let array = []                      //creamos un arreglo vacio que servirá para almacenar los numeros
+    for(i = 1; i <= 10; i++){           //bucle for
+        array.push(multiplicar(num,i))  //Aquí realizamos el Callback a una funcion externa llamada "multplicar"
+    }
+    return array //Nos devuelve la tabla de multiplicar
+}
+
+function multiplicar(num,cont){        //Esta funcion se encarga de multiplicar un numero ingresado por el numero de conteo
+    return num * cont
+}
+
+De tal forma de que si quiesieramos mostrar la tabla de multiplicar del 7
+
+mostrarTabla(7)
+
+//Nos retornaría [7,14,21,28,35,42,49,56,63,70]
