@@ -10,6 +10,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+
+    let valores = Object.entries(objeto)
+
+    return valores
+  
 }
 
 
@@ -18,6 +23,11 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var contador = {};
+  string.replace(/\S/g, function(p){
+    contador[p] = (isNaN(contador[p]) ? 1 : contador[p] + 1)
+  })
+  return contador
 }
 
 
@@ -26,6 +36,10 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  // let mayusculasPrimero = [...s].sort((a, b) => /[A-Z]/.test(a) ? /[A-Z]/.test(b) ? 0 : -1 : 0).join('')
+  // return mayusculasPrimero
+  let regExp = /[A-Z]/
+  return [...s].sort((a,b)=> regExp.test(a) ? regExp.test(b) ? 0 : -1 : 0).join('')
 }
 
 
@@ -35,6 +49,10 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let mirror = str.split(" ").map((palabra) => {
+   return palabra.split("").reverse().join("")
+  }).join(" ")
+  return mirror
 } 
 
 
@@ -43,6 +61,10 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  let num1 = numero.toString()
+  let num2 = num1.split("").reverse().join("")
+
+  return num1 === num2 ? "Es capicua" : "No es capicua"
 }
 
 
@@ -50,6 +72,9 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  let regEx = /(a|b|c)/igm
+ return cadena.replaceAll(regEx,'')
+
 }
 
 
@@ -57,6 +82,9 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  let arrayCreciente = [...arr].sort((a,b) => a.length - b.length)
+  
+  return arrayCreciente
 }
 
 
@@ -66,6 +94,8 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  const intersecArray = arreglo1.filter(valor => arreglo2.includes(valor))
+  return intersecArray
 }
 
 

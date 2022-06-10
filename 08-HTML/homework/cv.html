@@ -1,0 +1,113 @@
+<!-- ## Ejercicio II
+
+```
+Usando lo que aprendiste de HTML vas a crear un nuevo documento dentro de la carpeta de 'homework' llamado 'cv.html'. En el mismo vas crear tu propio Curriculum, deberá tener las siguientes secciones:
+
+* Titulo
+* Descripción Personal
+* Educación
+* Experiencias Laborales
+* Skills
+* Tu foto
+* Hobbies
+
+Además agregá una sección más donde expliques por qué estás estudiando esta carrera y cuáles son tus expectativas al finalizar la carrera.
+
+Subir también este archivo a su repositorio de github -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrés Medina</title>
+        <link rel="stylesheet" href="cv.css">
+    </head>
+    <body>
+    <main id="main">
+    <section id="topbar">
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">Acerca</a></li>
+            <li><a href="#projects">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    </section>
+        
+        <section id="welcome-section">
+            <div class="img-container"><img id="profile-pic" src="https://assets.codepen.io/3835161/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1627397343&width=512" alt=""></div>
+          <header id="title-header">
+          <h1 id="title">Andres Medina</h1>
+            <h2>Ingeniero en Computación</h2>
+            <p>Tengo 25 años, soy docente de inglés y me gusta mucho el Jazz y los videojuegos Indie. Mi objetivo es convertirme en un desarrollador web.
+                Cuando no estoy aprendiendo programación o dando clases, me gusta leer mangas y practicar producción musical a través del sampling.
+            </p>
+            <br>
+            <p>Me siento positivo de que con un poco más de dedicación, podré desenvolverme como un desarrollador Fullstack</p>
+          </header>
+        </section>
+        
+        <section id="projects">
+          <header>
+            <h1>Experiencia</h1>
+          </header>
+
+          <div class="campo"> 
+              <h2>Docente de inglés     (2022-Actualidad)</h2> 
+              <h4>Centro Electrónico de Idiomas</h4>
+        </div>
+          <div class="campo">
+              <h2>Transcripción de audio y video (2020-2021)</h2>
+              <h4>verbit.ai</h4>
+          </div>
+
+          <header>
+              <h1>Educación y certificaciones</h1>
+          </header>
+
+        <div class="reverse">
+
+            <div class="campo">
+                <h2>Ingeniería en Computación (2015-2019)</h2>
+                <h4>Universidad Rafael Belloso Chacín (URBE)</h4>
+            </div>
+            <div class="campo">
+                <h2>Inglés C1 (2014)</h2>
+                <h4>Centro Electrónico de Idiomas</h4>
+            </div>
+        </div>
+            
+          <header>
+            <h1>Habilidades</h1>
+          </header>
+
+          <div class="campo"> 
+             <ul>
+                 <li>Excelente comunicación</li>
+                 <li>Constante aprendizaje</li>
+                 <li>Redacción profesional y pulcra</li>
+                 <li>Conocimientos de programación Web</li>
+                 <li>Mantenimiento de computadoras y otros equipos electrónicos</li>
+             </ul>
+          </div>
+   
+        </section>
+        
+        <section id="contact">
+          <header id="contact-info">
+            <h1>Información de contacto</h1>
+          </header>
+          <div id="links">
+            <a href="https://www.linkedin.com/in/andres-medina-971207176/" target="_blank"><img src="data:image/png;base64,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" alt="LinkedIn Profile"></a>
+            <a id="profile-link" href="https://github.com/MAD96" target="_blank"><img src="data:image/png;base64,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" alt="Github Profile"></a>
+            <a href="https://www.facebook.com/admb9" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAIaklEQVR4XsVbTWhcVRQ+5yWmLXYmtTSZ0Cq2XYoLwR9EInZXF93434UICoIbEbHO1C7sj0iTiOBOaDHgQrQo0k1QCgWpFBFSXBQENykurE5aNZlBmrbJHHnv3ffe/b/nTiZ0Vsl75557znd+7333Imi/sVZnMgF4DQD2AcBOANik09j+JwBAD2HoPWcOLk0+VypN+hfcBICrAPADJfDZ4sn6RZlPKfOO5rUawsjpBPEl7kTRdDoKbFRyMQkoB5kQADPlxHPxr88CJTGdWYNbr1+fGeumj7IhqfJDOHIBAB/SlSICQA5jgTeT1MSODQYXduEBFr4I9Msq3Xrq+kdj3UzeRnP5K9hIy5cyl25p1cKLwaABIjrTnhk9iCLmf/TGdTm5X4GKB5cuj1Lda3y6DhKHHsCT2Gh1ZgHgVTWg3G7WvwB8UFQg8+hXfiTSgNdq1XwumQlgNgVggQj2cOOcG4G5XTXB+YOFX0jjDS0K/uo8GZmgLYakeSwVx5KfFrDR7KwA4iZd2Go+myIh5ULvGUiYZkuf/A0A1xBohQC3AcA9ADAaqMCOyTI4bqYekMFcosXi1q+C0ePmgfAsQO98e6l+CU/hbcOnjlKybXmpPrIZtye9ofsJaC8gnBA9TBBpbLS6BFmtk2klQSVLqA2Gpkz/ycHMhAQXKUmOLU7dfV4p+GF1MlOOtzrzCPBwkDw1duEBbmKP1dajtDKhlLAIjy1u2foBHMceRwGdJuU09m5nHhMdALsebgBYytkTEbvIa3MkiC/+OVX72qc4J4jYHkDo8YAoALi2wqqd1YYg0Im/pkePhjhlAARQYAFQVIZwCFhECmZMt6JWXAl/am/ZOslye4YLsAAQauVJ0FuvzYZCUYLlKWI2By1hb//i1LZzIetz3+sA+ES05wBlhAl5jM4Moefb07XH4rK9v82K9IC8D/D+tOVniDzqPcGR9kz9ZDmG4eIZrYcuDoBmRyyy7Rz7tbaMqqUFrTBK6PH2ydGfY0BrHOqOYwLP95AeRYAxBByWxxPQEwBQs/PUQjpLgqWWMggWQAJoFEpLuzFGk6OxWGlvrtXgOK5yAWi0ugcJ6DQAbJWLMLv06tXHDQBXJBcdo4FC+L09Vd9t5WAZPvFe94Fejy4jYGJ2r/3Jy+gEK8Z+B4hoiqqicGlxuv6IIboDu0ar8y0APNOfqvbEEQVA/xM7veRce7q2n8eX0pK9BAD1KtQcIyMSVw6ANQf4xOKm6pBqONeerh2oqNx8d77T2bE2DNcMjrqyliatepRmJxk+CiyGLEgajzxo5+VFFBkbFgRz7Zm6BIAgssX/4X92Ew1fCUHqfO+QkxUC9vbVs3EgBjA8ca49bQHAUuYnDv+7m2ioPwA8gjgBYAhvZkfWIMW8OQCMiFIAYM3D8xWWB8TW2Eo+h2YVgekBjiEVAAy0eLpnVBkAaZQiUf7BpSpRyiaRN/bFLm021PiQ4hI4e+4MgVy6al9VBaDQ0NPFSwKXf1o8R1QB+VNTJMI+d9Teqf9qAIhp8zxtKubKAeFo0LtbYaUi31b7AZGKB9yMAH5DwO99ZIT06+JU/RTHY+99e3n77ZHk/cLLCvesAMj/QqD7COBZDs8yBGSH8i5cNK5e9BG/aE/VXuYKwqMLG2m8tfwKAn7O48faFFWTgqy0/OFUbi/y+LUBEFaAK7iLrtHqfAgAR8r3cmNU5BVpMLMK6IIzFNkQDwjDM9HqftMDeo7ryUwAHKXBFzteAKoO0ZPHrdq6kmRB3Gh2LgPCg2GocgrGllhAeddMd8IDXqChxt7uf9xTLW4AuPDpdHKCuAMANA4t7YGhZEFpIALrGePboFV3nUmg+GavuQAw0okukysjjR1efjoh/M7QIWotEECM7RxcANgMBaHcqmpjG63ltwDwE/6neePLkIRtRIcny1EOWzcA8a4x0Vz+lBDfyOSxyl/xLF7HVQGrpvlDudwKI50dpuE3fQamtdWVqx/Xr7Oc4CgN77pxY8JHu4arXxLAJItf4VBxn8Y8VrEgYLeCIp5/MSSRDmo5rDhGunALARBebPDxNnnpW2IFLxPo6A2RPBNbjumoz4IA8NWLj1kA6M8DJKG4qcrmoFUfEG1mTVnWeDMBWQEIboj4TJIPZoljzwE+K1oVcErDFGJDPcCLhBAwEAI+pftyeR2wDICKk5vnhLIrzJzb+KiLoH9RGkwOcCYcRzmuDjqu2wNCNT/kiZEAmAiyWmd32A4GAH6mVpsW7ykx33FUyz62sSGiCZVbwnDdDQTAsWLQXELyAGZcrfdYvApM/wDIilT9t/14rmd9ww6BUCz5Mq5nrAcA1SC8RohvxLLlUjvBWAaC3tVlGN4ywBAIWqRytZLUMoa3I8RttzjJSHXXqBDo0dCVAsJ8wRXXm9iWyRYAwl5A6QnLTIIi9dk0D/MZRCvMwVxerer0KgDCOrrBTQ9nKWfKZiarygNklim62SH/6ufNARpfl8MqoSAcCMdbnezkqf9nX1Xlt7g4YIgZtO+PAK7VoCmNCoB9zvLQezYdR658ObxS7qJGnQfkTRBANioHVOcDCpO5Q5CTIym7MNHsLADCngwx496AEJ/DrdTUA4zJJxqAjAVbnqCRFqRLU0FiT0w77BxqUAawHxAK3sD7WfPaHBvdkNLSexkIxctwbnG6dkB25NjP4+sBgBKYzILJeXFyvWCEpYsOgZyl21srkV00RfMmLk6m7PKrs3ddAEiMq7OmDo5FRlhZG4UDAFP4ogq4uroYW5VXZ2fE1dkSBBg57b9CKwnmnVFTwEIrHmkbIm4Ug2sBbwWT5bZcnpanFVdp05uk+4BwFyD5r89nmoQSqPM9IwTysYYHyEJbjVHOmV6f/0Ncn5/Vr8//D7OBK6Z4p3whAAAAAElFTkSuQmCC" alt="Facebook Page"></a>
+          </div>
+        </section>
+        
+      </main>
+    
+</body>
+</html>
